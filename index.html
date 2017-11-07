@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Status Of IPv6</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+          href="https://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+<div id="content">
+    <div class="jumbotron">
+        <h1>The State of IPv6</h1>
+    </div>
+    <div id="global_status">
+        <h2>Global Status</h2>
+        <a href="#container1" class="btn btn-default scroll_link">ASNs (IPv4, IPv6)</a>
+        <a href="#container2" class="btn btn-default scroll_link">IPv6 Ratio</a>
+        <a href="#container3" class="btn btn-default scroll_link">Price of IPv4 on the secondary transfer market</a>
+        <a href="#container4" class="btn btn-default scroll_link">IPv6 ratio compared to number of IPv4 prefix transfers</a>
+
+
+        <div id="paragraph1">21 years ago on March, 1996 Internet Protocol, Version 6 (IPv6) Specification was
+            published. So what's an Internet Protocol, and what's wrong with the previous five versions? And if version
+            6 is so great, why has it only been adopted by half a percent of the Internet's users each year over the
+            past two decades?<br/>
+            There are a lot of definitions of IP, but this is one is most understandable to me:
+            The Internet Protocol (IP) is the method or protocol by which data is sent from one computer to another on
+            the Internet. Each computer (known as a host) on the Internet has at least one IP address that uniquely
+            identifies it from all other computers on the Internet.
+
+        </div>
+        <div id="container1"></div>
+        <div id="paragraph2">
+            <h3>Why to use IPv6?</h3>
+            <ol>
+                <li>IPv6 has massive address abundance</li>
+                <li>IPv6 networks are easier and cheaper to manage</li>
+                <li>IPv6 restores end-to-end transparency</li>
+                <li>IPv6 has improved security features</li>
+                <li>IPv6 has improved mobility capabilities</li>
+                <li>IPv6 encourages innovation</li>
+            </ol>
+            IPv6 has been around for two decades now. So why are we still measuring IPv6 deployment in percentage points
+            per year?<br/>
+
+            First the good news. On Saturday 03 November 2017, Google's statistics show IPv6 availability to
+            approximately 20% of its users. It is used more on weekends and adoption is uneven across countries and
+            Internet service providers. Apparently more people have IPv6 available at home than at work.<br/>
+
+            In November 2016, 1491 (98.2%) of the 1519 top-level domains (TLDs) in the Internet supported IPv6 to access
+            their domain name servers, and 1485 (97.8%) zones contained IPv6 glue records, and approximately 9.0 million
+            domains (4.6%) had IPv6 address records in their zones. Of all networks in the global BGP routing table,
+            29.2% had IPv6 protocol support.
+        </div>
+        <div id="container2"></div>
+        <div id="paragraph3">
+            <h3>5 reasons why the adoption of IPv6 takes so long:</h3>
+            <ol>
+                <li>It's bloody expensive<br/>
+                    The internet is made up of millions of routers and switches. Those were initially designed to work
+                    with IPv4. Replacing or upgrading them takes time and budget.
+                </li>
+
+                <li>Network address translation (NAT) to the rescue<br/>
+                    The IPv4 address exhaustion was the major driver to develop IPv6.
+                </li>
+
+                <li>Compatibility please!<br/>
+                    During the design of the IPv6 protocol, backward compatibility was not on the requirements list.
+                    This lack of compatibility with the current IPv4 protocol was the single critical failure. Because
+                    of this, the transition towards IPv6 does not provide a single, standardized solution to communicate
+                    with devices and systems that still run IPv4.
+                </li>
+
+
+                <li>I will not do it if you don't<br/>
+                    There is no direct benefit of being an early adopter. Nobody will switch to IPv6 as long as none of
+                    their contacts is switching too.
+                </li>
+
+                <li>It doesn't reach the eye<br/>
+                    While the adoption of IPv6 goes much slower than initially planned, the transition is already taking
+                    place. At this point, somewhere between 18 to 20 percent of traffic reaching Google is IPv6 traffic.
+            </ol>
+        </div>
+        <div id="container3"></div>
+
+        <div id="container4"></div>
+        <div id="container_ratio_transfers"></div>
+
+    </div>
+
+    <div id="worldmap">
+        <div id="world_paragraph">
+            <h3>At the end</h3>
+            As noted, networks worldwide are in the process of turning IPv6 on, and some are in the process of turning
+            IPv4 off. IPv6 has been a “future” since 1998, and an important future since 2007. It is now becoming a
+            present-day reality. If a 67 percent increase per year is the new normal, it'll take until summer 2020 until
+            the entire world has IPv6 and we can all stop slicing and dicing our diminishing stashes of IPv4 addresses.
+            The hardest part of any journey is proverbially the first step, and not taking that step merely delays the
+            pain and the costs involved.
+        </div>
+        <div id="world_container"></div>
+        <div id="world_info">
+            <span class="f32"><span id="flag"></span></span>
+            <h2></h2>
+            <div class="subheader">Click countries to view the IPv6 status</div>
+            <div id="country-chart"></div>
+            <div id="ccprefix-chart"></div>
+        </div>
+    </div>
+    <div id="gototop">
+        <a href="#content" class="btn btn-default scroll_link">goto TOP</a>
+    </div>
+</div>
+
+
+</body>
+
+<footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/countrycodes.js"></script>
+    <script src="data/allocationdata.js"></script>
+    <script src="js/thestatusofipv6.js"></script>
+    <script src="js/highchartsdiagrams.js"></script>
+    <script src="js/ipv6ratio_against_ipv6transfers.js"></script>
+</footer>
+
+</html>
